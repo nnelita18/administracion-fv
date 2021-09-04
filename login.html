@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Administración de Fuerza de ventas - Login
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="./assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="container-scroller login">
+    <div class="container-fluid page-body-wrapper full-page-wrapper h-100">
+      <div class="content-wrapper d-flex align-items-center auth px-0 h-100">
+        <div class="row w-100 justify-content-end">
+          <div class="col-lg-5 col-md-6">
+            <div class="auth-form-light text-left py-5 px-4 px-sm-5">
+              <i class="material-icons iconuser">assignment_ind</i>
+              <h4 class="text-center">Bienvenido</h4>
+
+              <div class="brand-logo text-center">
+                <h3 class="font-weight-bold text-capitalize">Manager General</h3>
+              </div>
+              <h6 class="font-weight-light mb-5 text-center">Inicia sesión para continuar.</h6>
+              <form>
+                <div class="form-group mb-4">
+                  <label for="user">Usuario <span class="txr">*</span></label>
+                  <input type="text" class="form-control" id="user" placeholder="Enter email" required>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="passw">Contraseña <span class="txr">*</span></label>
+                  <input type="password" class="form-control" id="passw" placeholder="Password" required>
+                </div>
+                <div class="form-group mb-4">
+                  <label for="passw">Token <span class="txr">*</span></label>
+                  <input type="password" class="form-control" id="passw" placeholder="ygeudeu" required>
+                </div>
+
+                <button type="submit" class="btn btn-block btn-primary btn-lg font-weight-medium auth-form-btn">Acceder</button>
+
+                <div class="text-center mt-4 font-weight-light"><a href="" class="text-primary" data-toggle="modal" data-target="#recov-psw">Olvidaste tu contraseña </a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- content-wrapper ends -->
+    </div>
+    <!-- page-body-wrapper ends -->
+  </div>
+
+  <!-- Recuperar Contraseña Modal -->
+  <div class="modal fade" id="recov-psw" tabindex="-1" role="dialog" aria-labelledby="recov-pswLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="recov-pswLabel">Recuperación de Contraseña</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="auth-form-transparent text-left p-3">
+              <form class="pt-3">
+                  <div class="form-group">
+                      <label for="exampleInputEmail">Ingresa el correo que usaste para crear tu cuenta, te enviaremos un enlace para que configures tu nueva contraseña.</label>
+                      <div class="input-group">
+                          <input type="text" class="form-control form-control-lg" id="exampleInputEmail" placeholder="Correo Electronico">
+                      </div>
+                  </div>
+
+              </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary mr-2">Enviar</button>
+          <button type="button" class="btn btn-light" data-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js"></script>
+  <script src="./assets/js/core/bootstrap-material-design.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="./assets/js/plugins/sweetalert2.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-dashboard.js?v=2.1.3" type="text/javascript"></script>
+  <script src="./assets/js/init.js"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <!-- <script src="./assets/demo/demo.js"></script> -->
+
+</body>
+
+</html>

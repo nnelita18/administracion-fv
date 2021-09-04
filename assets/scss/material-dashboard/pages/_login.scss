@@ -1,0 +1,30 @@
+$login: '.login';
+
+#{$login}{
+	height: 100vh;
+	background-color: #ffffff;
+	.auth-form-light {
+		background-color: $light-green-10;
+	}
+	.full-page-wrapper {
+		background: {
+			color: #ffffff;
+			image: url('../img/bg/bg-login.jpg');
+			size: contain;
+			position: left center;
+			repeat: no-repeat;
+		}
+		.iconuser {
+			font-size: 7rem;
+			position: absolute;
+			top: -4rem;
+			left: 0;
+			right: 0;
+			margin: 0 auto;
+			text-align: center;
+		}
+		.form-group .bmd-label-static {
+			color: #384250;
+		}
+	}
+}

@@ -1,0 +1,243 @@
+
+<div class="container-fluid" id="contsms">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="display-2 h3 mt-0">Alta de Tienda <small id="tit"></small></h1>
+      <div class="card">
+        <div class="card-header card-header-primary">
+          <h3 class="card-title">Tipo de Tienda</h3>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+             <label>Tipo:<span class="txr">*</span></label>
+              <select class="form-control input-sm notEmpty" name="slc" id="slc">
+                <option value="" selected>Seleccione...</option>
+                <option value="sms1">Gronet</option>
+                <!--<option value="sms7">Tae</option>-->
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="msj">
+        <div class="card">
+          <div class="card-header card-header-primary">
+            <h3 class="card-title">Datos</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Nombre:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="nom" id="nom" placeholder="Nombre (s)" required>
+              </div>
+              <div class="col-md-4">
+                <label>Apellido paterno:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="apat" id="apat" required>
+              </div>
+              <div class="col-md-4">
+                <label>Apellido materno:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="amat" id="amat" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <label>Tel&eacute;fono celular:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm isTel" name="cel" id="cel" onKeyPress="return soloNum(event)" maxlength="10" minlength="10" placeholder="Celular (10 digitos)" required>
+              </div>
+              <div class="col-md-4">
+                <label>Correo electr&oacute;nico:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm isemail" name="email" id="email" placeholder="nombre@servidor.com" required>
+              </div>
+              <div class="col-md-4">
+                <label>RFC (solo si requiere factura):</label>
+                <input type="text" class="form-control input-sm" name="rfc" id="rfc" required>
+              </div>
+            </div>
+          </div>
+          <div class="card-header card-header-primary">
+            <h3 class="card-title">Datos del punto de venta</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Nombre del negocio:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="npv" id="npv" placeholder="" value="">
+              </div>
+              <div class="col-md-4">
+                <label>Medio de venta:<span class="txr">*</span>
+                </label>
+                <select class="form-control input-sm notEmpty" name="mv" id="mv" onchange="showOp();">
+                  <option value="" selected>Seleccione...</option>
+                  <option value="Web">Web</option>
+                  <option value="Android">Android</option>
+                  <option value="GPRS">GPRS</option>
+                  <option value="SMS">SMS</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label>Porcentaje por default [5%]</label>
+                <select class="form-control input-sm notEmpty" name="porce" id="porce" onchange="llena_porce();">
+                  <option value="" selected>Seleccione...</option>
+                  <option value="4.5">4.5%</option>
+                  <option value="5">5%</option>
+                  <option value="5.5">5.5%</option>
+                  <option value="6">6%</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label>Nombre del vendedor:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="vendedor" id="vendedor" placeholder="" value="">
+              </div>
+              <div class="col-md-4 disable" id="regcel">
+                <label>N&uacute;mero celular:<span class="txr">* (el que se usara para hacer las recargas)</span>
+                </label>
+                <input type="hidden" class="form-control input-sm" name="rcel" id="rcel" onKeyPress="return soloNum(event)" maxlength="10" minlength="10" placeholder="Celular (10 digitos)" required>
+              </div>
+              <div class="col-md-4" style="visibility:hidden">
+                <label>Tipo de Cliente:<span class="txr">*</span>
+                </label>
+                <input type="text" id="tpc">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="alert alert-warning" style="margin-top: 15px;"> <span>Recuerde que la direcci&oacute;n que se solicita es la del punto de venta.</span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <label>Estado:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="edo" id="edo" placeholder="" required>
+              </div>
+              <div class="col-md-4">
+                <label>Municipio:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="muni" id="muni" placeholder="" required>
+              </div>
+              <div class="col-md-4">
+                <label>Ciudad:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="cd" id="cd" placeholder="" required>
+              </div>
+              <div class="col-md-4">
+                <label>Colonia:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="col" id="col" placeholder="" required>
+              </div>
+              <div class="col-md-4">
+                <label>Cod. Postal:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="cp" id="cp" maxlength="5" minlength="5" placeholder="" onKeyPress="return soloNum(event)" required>
+              </div>
+              <div class="col-md-4">
+                <label>Calle:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="calle" id="calle" placeholder="" required>
+              </div>
+              <div class="col-md-4">
+                <label>Num. Exterior:<span class="txr">*</span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" name="next" id="next" placeholder="" required>
+              </div>
+              <div class="col-md-4">
+                <label>Num. Interior:</label>
+                <input type="text" class="form-control input-sm" name="nint" id="nint" placeholder="">
+                <input type="hidden" name="fn" id="fn" value="sms1">
+              </div>
+            </div>
+          </div>
+          <div class="card-header card-header-primary">
+            <h3 class="card-title">Porcentajes a asignar:</h3>
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Telcel:<span class="txr">* <small id="ptel"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('tae','telcel');" onKeyPress="return soloNum2(event)" name="telcel" id="telcel" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Movistar:<span class="txr">* <small id="pmovi"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('movi','movi');" onKeyPress="return soloNum2(event)" name="movi" id="movi" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Iusacell:<span class="txr">* <small id="pius"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('iusa','iusa');" onKeyPress="return soloNum2(event)" name="iusa" id="iusa" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Nextel:<span class="txr">* <small id="pnex"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('next','nextel');" onKeyPress="return soloNum2(event)" name="nextel" id="nextel" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Unefon:<span class="txr">* <small id="pune"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('une','une');" onKeyPress="return soloNum2(event)" name="une" id="une" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Alo:<span class="txr">* <small id="palo"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('alo','alo');" onKeyPress="return soloNum2(event)" name="alo" id="alo" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Cargo x Serv.:<span class="txr">* <small id="pcarg"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkCargo('cargo','cargo');" onKeyPress="return soloNum2(event)" name="cargo" id="cargo" required value="2.5">
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Cierto:<span class="txr">* <small id="pcier"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('cierto','cierto');" onKeyPress="return soloNum2(event)" name="cierto" id="cierto" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Mas:<span class="txr">* <small id="pmas"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('mas','mas');" onKeyPress="return soloNum2(event)" name="mas" id="mas" required>
+              </div>
+              <div class="col-md-2 col-sm-2 col-xs-6">
+                <label>Virgin:<span class="txr">* <small id="pvir"></small></span>
+                </label>
+                <input type="text" class="form-control input-sm notEmpty" onchange="checkPorcent('virgin','virgin');" onKeyPress="return soloNum2(event)" name="virgin" id="virgin" required>
+              </div>
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <br>
+                <br>
+                <div id="rpor"></div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div class="row w-100">
+              <div class="col-12 text-right">
+                <a href="./" class="btn btn-primary" ><i class="fa fa-reply"></i> Regresar</a>
+                <button id="boton" class="btn btn-success" onclick="checkF();"><i class="fa fa-user-plus"></i> enviar solicitud</button>
+                <div id="err" class="err"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12 text-right"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+</div><!--/ container -->
+<script>
+
+</script>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<!--   <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png"> -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Administración de Fuerza de ventas
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="./assets/css/color-picker.css" rel="stylesheet" />
+  <link href="./assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper " data-bgcolor="green">
+    <div class="sidebar" data-color="green" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+      <div class="logo">
+        <a href="" class="img-logo">
+          <img src="./assets/img/royal.jpg" class="iconlogo" alt="">
+        </a>
+        <a href="#" class="simple-text logo-normal d-none">
+          Manager Royal
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="nav-item active  ">
+            <a class="nav-link" href="./">
+              <i class="material-icons">home</i>
+              <p>Inicio</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#ui-store" aria-expanded="true" aria-controls="ui-store">
+              <i class="material-icons">storefront</i>
+              <span>Tiendas</span>
+              <i class="fa fa-angle-down fright"></i>
+            </a>
+            <div class="collapse" id="ui-store" style="">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"><a class="nav-link pageto" href="views/tiendas/agregar-tienda.html">Agregar Tienda</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/tiendas/lista-tienda.html">Lista de Tiendas</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/tiendas/plataformas.html">Plataformas</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/tiendas/cajeros.html">Cajeros</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/tiendas/venta-saldo.html">Venta Saldo</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/tiendas/token-ac.html">Token [Generar/liberar]</a></li>
+                <li class="nav-item"><a class="nav-link" href="views/tiendas/autorecarga.html">Autorecarga</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">receipt</i>
+              <p>Depósitos</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">assessment</i>
+              <p>Reportes</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">library_books</i>
+              <p>Recargas por Lote</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">contact_phone</i>
+              <p>Cargar números</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="#">
+              <i class="material-icons">dialpad</i>
+              <p>Visualizar NIP</p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" href="./notifications.html">
+              <i class="material-icons">notifications</i>
+              <p>Notifications</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav id="navbar-head" class="navbar navbar-expand-lg navbar-dark navbar-absolute fixed-top ">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <button class="btn btn-primary btn-round sidebar-toggler p-3"> <i class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">menu</i></button>
+            <span class="navbar-brand font-weight-bold" >ROYAL DISTRIBUIDOR AUTORIZADO</span>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav">
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="javascript:;">
+                  <i class="material-icons">dashboard</i>
+                  <p class="d-lg-none d-md-block">
+                    Stats
+                  </p>
+                </a>
+              </li> -->
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javascript:;" id="navbarAccount" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fa fa-money" aria-hidden="true"></i>
+                  <p class="d-lg-none d-md-block">
+                    Perfil
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarAccount">
+                  <a class="dropdown-item" href="#">Consultar Saldo</a>
+                  <a class="dropdown-item" href="#">Consultar Porcentajes</a>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="javascript:;">
+                  <i class="fa fa-cog fa-2x"></i>
+                  <p class="d-lg-none d-md-block">
+                    Configuración
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                  <button class="dropdown-item" data-toggle="modal" data-target="#settingsModal">Personalizar Manager</button>
+                  <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="javascript:;" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="material-icons">person</i>
+                  <p class="d-lg-none d-md-block">
+                    Perfil
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
+                  <a class="dropdown-item" href="#">Cambiar Contraseña</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Salir</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div id="content-replace" class="content">
+        <div class="container-fluid bg-home">
+          <div class="row h-100 justify-content-center align-items-center flex-wrap">
+            <div class="col-lg-9 text-center brand-name">
+              <h3>Bienvenido</h3>
+              <h1 class="title">ROYAL Distribuidor Autorizado</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Microtecnologías Móviles S.A. de C.V.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Modal Personalizar-->
+  <div class="modal fade modal--right" id="settingsModal" tabindex="-1" aria-labelledby="settingsModalLabel" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="settingsModalLabel">Configurar Manager</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>1. Agrega el logotipo de tu empresa aquí</p>
+          <div class="fileinput fileinput-new text-center mb-3" data-provides="fileinput">
+            <div class="fileinput-new thumbnail img-circle mx-auto">
+              <img src="./assets/img/logo-placeholder.png" rel="nofollow" alt="Logo Manager" class="img-fluid shadow" style="width: 100px; height: auto;">
+            </div>
+            <div class="fileinput-preview fileinput-exists thumbnail img-circle img-raised"></div>
+            <div class="d-flex align-middle flex-wrap justify-content-center">
+              <span class="btn btn-raised btn-primary btn-file">
+              <span class="fileinput-new">Agregar imagen</span>
+              <!-- <span class="fileinput-exists">Cambiar</span> -->
+              <input type="file" name="..." /></span>
+
+              <a href="javascript:;" class="btn btn-danger btn-round fileinput-exists ml-3" data-dismiss="fileinput"><i class="fa fa-times"></i> Eliminar</a>
+            </div>
+          </div>
+          <p>2. Selecciona el color que mejor se ajuste a tu logotipo</p>
+          <input id="themecolor-sel" class="color-picker cp-sm cp-show"  value="#0e76a8">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/jquery.min.js"></script>
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="./assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="./assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="./assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="./assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="./assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="./assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="./assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="./assets/js/plugins/jquery.dataTables.min.js"></script>
+
+  <!-- ColorPicker JS -->
+  <script src="./assets/js/plugins/color-picker.js"></script>
+
+  <!--  Notifications Plugin    -->
+  <script src="./assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/material-dashboard.js?v=2.1.3" type="text/javascript"></script>
+  <script src="./assets/js/init.js"></script>
+
+</body>
+
+</html>
